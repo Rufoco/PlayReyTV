@@ -12,7 +12,7 @@ body {
 
 .header {
     background-color: rgba(0, 0, 0, 0.9);
-    padding: 1rem;
+    padding: 0.5rem; /* Reducido a 0.5rem */
     position: fixed;
     width: 100%;
     top: 0;
@@ -28,7 +28,7 @@ body {
 }
 
 .logo img {
-    height: 200px;
+    height: 150px; /* Ajustado a 150px */
     width: auto;
     vertical-align: middle;
 }
@@ -44,10 +44,15 @@ body {
     font-size: 1.1rem;
 }
 
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    cursor: pointer;
+}
+
 .hero {
     height: 100vh; /* Cambiado de 80vh a 100vh */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('../images/fondo.png') center/cover;
+    url('../images/fondo.png') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,7 +63,7 @@ body {
 .hero-content {
     max-width: 800px;
     padding: 2rem;
-    margin-top: 50px; /* Ajustado para compensar el header fijo */
+    margin-top: 100px; /* Ajustado para compensar el header fijo */
 }
 
 .hero-content h1 {
@@ -125,7 +130,22 @@ body {
 
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
+        display: none; /* Ocultar enlaces en móvil */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajustar según la altura de la cabecera */
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostrar enlaces cuando se activa */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar botón de menú en móvil */
     }
 
     .hero-content h1 {

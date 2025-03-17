@@ -12,14 +12,17 @@
     <header class="header">
         <nav class="nav">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="PlayRey Logo" height="200">
+                <img src="images/logo.png" alt="PlayRey Logo" height="150"> <!-- Ajustado a 150px -->
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <a href="index.html">Inicio</a>
                 <a href="descargas.html">Descargas</a>
                 <a href="precios.html">Precio</a>
                 <a href="faq.html">FAQ</a>
                 <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
             </div>
         </nav>
     </header>
@@ -28,31 +31,6 @@
         <div class="hero-content">
             <h1>Planes y Precios</h1>
             <p>Elige el plan que mejor se adapte a tus necesidades</p>
-        </div>
-    </section>
-
-    <section class="pricing-features">
-        <div class="features-container">
-            <div class="feature">
-                <i class="fas fa-tv"></i>
-                <h3>10,000+ Canales en Vivo</h3>
-                <p>Disfruta de una amplia variedad de canales en alta definición, incluyendo deportes, noticias y entretenimiento.</p>
-            </div>
-            <div class="feature">
-                <i class="fas fa-film"></i>
-                <h3>20,000+ Películas y Series</h3>
-                <p>Accede a los últimos estrenos y tus series favoritas en cualquier momento.</p>
-            </div>
-            <div class="feature">
-                <i class="fas fa-clock"></i>
-                <h3>Sin Contratos</h3>
-                <p>Flexibilidad total: cancela o cambia tu plan cuando lo desees, sin complicaciones.</p>
-            </div>
-            <div class="feature">
-                <i class="fas fa-headset"></i>
-                <h3>Soporte 24/7</h3>
-                <p>Estamos disponibles para ayudarte en cualquier momento, los 7 días de la semana.</p>
-            </div>
         </div>
     </section>
 
@@ -73,7 +51,7 @@
             </div>
             <a href="#" class="pricing-button">Seleccionar Plan</a>
         </div>
-
+        
         <div class="pricing-card popular">
             <div class="popular-tag">Más Popular</div>
             <div class="pricing-header">
@@ -91,7 +69,7 @@
             </div>
             <a href="#" class="pricing-button">Seleccionar Plan</a>
         </div>
-
+        
         <div class="pricing-card">
             <div class="pricing-header">
                 <h2>Semestral</h2>
@@ -108,7 +86,7 @@
             </div>
             <a href="#" class="pricing-button">Seleccionar Plan</a>
         </div>
-
+        
         <div class="pricing-card">
             <div class="pricing-header">
                 <h2>Anual</h2>
@@ -126,5 +104,14 @@
             <a href="#" class="pricing-button">Seleccionar Plan</a>
         </div>
     </section>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
