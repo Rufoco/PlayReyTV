@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descargas - PlayRey</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <style>
+    /* Estilos adicionales para la página Descargas */
+    .downloads-hero {
+      min-height: 30vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                  url('images/descargas-bg.png') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .downloads-hero .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .downloads-hero .hero-content p {
+      font-size: 1.3rem;
+    }
+    .downloads-container {
+      max-width: 600px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+    .download-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+    .download-card:hover {
+      background-color: rgba(229, 9, 20, 0.2);
+    }
+    .download-card a {
+      display: block;
+      color: white;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+    .download-card i {
+      margin-right: 0.5rem;
+      color: #e50914;
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado (mismo que en las otras páginas) -->
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="PlayRey Logo" height="150">
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="descargas.html">Descargas</a>
+        <a href="precios.html">Precio</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sección principal de Descargas -->
+  <section class="downloads-hero">
+    <div class="hero-content">
+      <h1>Descargas</h1>
+      <p>Elige tu plataforma para descargar la app de PlayRey</p>
+    </div>
+  </section>
+
+  <section class="downloads-container">
+    <div class="download-card">
+      <a href="#" target="_blank">
+        <i class="fab fa-android"></i> Descarga para Android
+      </a>
+    </div>
+    <div class="download-card">
+      <a href="#" target="_blank">
+        <i class="fab fa-apple"></i> Descarga para iOS
+      </a>
+    </div>
+    <div class="download-card">
+      <a href="#" target="_blank">
+        <i class="fab fa-windows"></i> Descarga para Windows
+      </a>
+    </div>
+    <div class="download-card">
+      <a href="#" target="_blank">
+        <i class="fab fa-apple"></i> Descarga para macOS
+      </a>
+    </div>
+    <div class="download-card">
+      <a href="#" target="_blank">
+        <i class="fas fa-tv"></i> Configuración para Smart TV
+      </a>
+    </div>
+  </section>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
